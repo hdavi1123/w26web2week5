@@ -176,7 +176,66 @@ footer p{
 }
 
 
+.slideback{
+	position: relative;
+}
+
+.slideback > img{
+	width: 100%;
+}
+
+.slideholder {
+	position: absolute;
+	top: 0;
+	width: 300%;
+	height: 100%;
+	display: flex;
+	background-color: lightgray;
+
+	transition: margin 1s ease-in-out;
+}
+
+.imgslide{
+	flex-grow: 1;
+	height: 100%;
+}
+
+.imgslide img{
+	margin-top: 26%;
+	width: 26%;
+}
+
+/* #slide1:checked ~ .slideback .slideholder{ margin-left(0)} */
+
 
 /******************************************
 		Labels (buttons)
 ******************************************/
+
+label{
+	display: inline-block;
+
+	background-color: lightblue;
+	padding: 5px 0;
+	font-size: 24px;
+	text-align: center;
+	margin: 0 15px;
+}
+
+label:hover{
+	background-color: hsl(101, 100%, 40%);
+}
+
+label:active{
+	background-color: hsl(101, 100%, 40%);
+	transform: (0.9);
+}
+
+#slide1:checked ~ label:nth-of-type(1){background-color: hsl(101, 100%, 50%);}
+#slide1:checked ~ label:nth-of-type(2){background-color: hsl(101, 100%, 50%);}
+#slide1:checked ~ label:nth-of-type(3){background-color: hsl(101, 100%, 50%);}
+
+input[type="radio"]{
+	display: none;
+}
+
