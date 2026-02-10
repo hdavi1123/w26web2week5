@@ -96,11 +96,69 @@ footer p{
 	background:lightblue;
 }
 
+/* in clss */
 
+.shapes .shape1:nth-child(3){
+	/* transform: scale(2,1.5); */
+	transition: transform 1s ease-in-out;
+}
 
-/******************************************
+.shapes .shape1:nth-child(3):hover{
+	transform: scale(0.2,0.2)
+}
+
+.shapes .shape1:nth-child(2){
+	transition: all 750ms ease-in-out;
+}
+
+.shapes .shape1:nth-child(2):hover{
+	transform: rotate(135deg);
+	transform: translate(50px,20px);
+	background-color: lightgoldenrodyellow;
+}
+
+.shapes .shape1:nth-child(4){
+	animation: jump 2s ease-in-out infinite;
+}
+.shapes .shape1:nth-child(5){
+	animation: pendulum 2s ease-in-out infinite alternate;
+
+	
+}
+
+/************************************
+******
 		Animations
-******************************************/
+************************************
+******/
+
+@keyframes jump{
+	50%{
+		transform: translateY(-100px);
+	}
+}
+
+@keyframes pendulum{
+	0%,100%{
+		transform-origin: 0 -100px;
+	}
+	
+	0%{
+		transform: rotate(77deg);
+	}
+
+	100%{
+		transform: rotate(-45deg);
+	}
+	
+	
+	
+	
+	
+}
+
+
+
 
 
 
